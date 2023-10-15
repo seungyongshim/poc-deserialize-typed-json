@@ -14,7 +14,7 @@ var str = TypedJson.Serialize(value);
 
 
 var a = TypedJson.Deserialize("""
-    {"A":"A2","T":"A2.Dto.Class1","V":{"Value":"Hello","B":"B"}}
+    {"A":"A2","T":"A2.Dto.Class1","V":{"Value":"Hello","B":{"C": "B"}}}
     """);
 
 Console.WriteLine(a);

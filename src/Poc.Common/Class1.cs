@@ -9,11 +9,11 @@ public static class TypedJson
 {
     public static JsonSerializerOptions JsonSerializerOptions { get; } = new()
     {
+        
         PropertyNameCaseInsensitive = true,
     };
 
-
-    public static string Serialize<T>(T msg, JsonSerializerOptions jsonSerializerOptions = null) where T : notnull
+    public static string Serialize<T>(T msg, JsonSerializerOptions? jsonSerializerOptions = null) where T : notnull
     {
         jsonSerializerOptions ??= JsonSerializerOptions;
 
@@ -23,7 +23,7 @@ public static class TypedJson
         return @$"{{""A"":""{assembly}"",""T"":""{type}"",""V"":{JsonSerializer.Serialize(msg, jsonSerializerOptions)}}}";
     }
 
-    public static object? Deserialize(string jsonString, JsonSerializerOptions jsonSerializerOptions = null)
+    public static object? Deserialize(string jsonString, JsonSerializerOptions? jsonSerializerOptions = null)
     {
         jsonSerializerOptions ??= JsonSerializerOptions;
 
