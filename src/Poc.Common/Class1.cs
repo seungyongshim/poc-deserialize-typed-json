@@ -9,7 +9,7 @@ public static class TypedJson
 {
     public static JsonSerializerOptions JsonSerializerOptions { get; } = new()
     {
-        
+        //UnmappedMemberHandling = System.Text.Json.Serialization.JsonUnmappedMemberHandling.Disallow,
         PropertyNameCaseInsensitive = true,
     };
 
